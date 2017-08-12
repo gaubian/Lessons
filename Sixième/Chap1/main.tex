@@ -1,0 +1,239 @@
+\documentclass[12pt]{article}
+\usepackage{eso-pic,graphicx}
+\usepackage{geometry}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{fontspec}
+
+
+\newtheorem{definition}{Définition}
+\newtheorem*{question}{Question}
+\newtheorem{theorem}{Théorème}
+\newtheorem*{examples}{Exemples}
+\newtheorem*{example}{Exemple}
+
+\begin{document}
+
+\part*{Nombres entiers et décimaux}
+\section{C'est quoi un nombre ?}
+
+\paragraph{}
+D'après Wikipedia :
+
+\begin{definition}
+    Un nombre est un concept permettant d’évaluer et de comparer des quantités ou des rapports de grandeurs.
+\end{definition}
+
+\paragraph{}
+Ne vous embêtez pas à apprendre cette définition, mais retenez surtout qu'un nombre n'est rien de plus qu'un concept abstrait.
+
+\paragraph{}
+Par exemple, supposons que je vous pose la question suivante dans un devoir :
+
+\begin{question}
+  Combien de nains accompagnent Blanche-Neige ?
+\end{question}
+
+et que vous m'écrivez :
+$$7$$
+
+ou
+
+$$sept$$
+
+ou
+
+$$3+4$$
+
+ou
+
+$$sieben$$
+
+ou
+
+$$\frac{68607}{2 \pi \sqrt{2} \sum_{n = 0}^{+ \infty}\frac{(1103 + 26390n)n!}{(396^{n}n!)^{4}}}$$
+
+\paragraph{}
+Alors vous aurez donné \textbf{à chaque fois} la bonne réponse.
+
+\paragraph{}
+Seulement, chaque réponse présuppose certaines connaissances de ma part:
+\begin{itemize}
+  \item $\frac{68607}{2 \pi \sqrt{2} \sum_{n = 0}^{+ \infty}\frac{(1103 + 26390n)n!}{(396^{n}n!)^{4}}}$ suppose que j'ai fait un peu de maths
+  \item $sieben$ suppose que je connais un peu la langue allemande
+  \item $3+4$ suppose que je sais faire des additions
+  \item $sept$ suppose que je connais un peu la langue française
+  \item $7$ suppose que je connais \textbf{l'écriture décimale}.
+\end{itemize}
+
+\paragraph{}
+Comme vous pouvez le voir, il existe une multitude de façons d'exprimer un même nombre, certaines écritures sont plus pratiques que d'autres selon la situation, l'écriture décimale ( 7 ) n'en est qu'une parmi \textbf{beaucoup}.
+
+
+\paragraph{}
+Par exemple, une bonne réponse à la question «Combien de nains accompagnent Blanche-Neige ?» aurait été «Le nombre de nains qui accompagnent Blanche-Neige». C'est rigolo comme réponse, mais ça ne nous fait pas beaucoup avancer…
+
+\paragraph{}
+\emph{Dans la vraie vie}, pour éviter ce genre de désagréments, on s'attend à ce que la réponse soit donnée en écriture décimale.
+
+\section{L'écriture décimale}
+
+\subsection{Définition}
+\begin{definition}
+Un nombre est écrit en écriture décimale dès qu'on l'exprime sous la forme d'une série de chiffres suivie \textbf{éventuellement} d'une virgule puis d'une série de chiffres.
+\end{definition}
+
+\begin{examples}
+
+  $7$ \textbf{est écrit} en écriture décimale
+
+  $7,0$ \textbf{est écrit} en écriture décimale
+
+  $007,0000$ \textbf{est écrit} en écriture décimale
+
+  $1337,42$ \textbf{est écrit} en écriture décimale
+
+  $3+4$ \textbf{n'est pas écrit} en écriture décimale
+
+  $\frac{70}{10}$ \textbf{n'est pas écrit} en écriture décimale
+\end{examples}
+
+\paragraph{}
+Les nombres que l'on peut écrire en écriture décimale sont appelés \textbf{nombres décimaux} \footnote{il existe des nombres qu'on ne peut pas écrire en écriture décimale, mais vous verrez ça dans très longtemps !}.
+
+\paragraph{}
+Prenons un nombre au hasard, par exemple $4832,326$
+\begin{itemize}
+  \item $4$ est le chiffre des \textbf{milliers}
+  \item $8$ est le chiffre des \textbf{centaines}
+  \item $3$ est le chiffre des \textbf{dizaines}
+  \item $2$ est le chiffre des \textbf{unités}
+  \item $3$ est le chiffre des \textbf{dixièmes}
+  \item $2$ est le chiffre des \textbf{centièmes}
+  \item $6$ est le chiffre des \textbf{millièmes}
+\end{itemize}
+
+C'est plus clair en l'écrivant dans un tableau, chiffre par chiffre :
+
+\paragraph{}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+milliers & centaines & dizaines & unités & & dixièmes & centièmes & millièmes \\
+\hline
+4 & 8 & 3 & 2 & , & 3 & 2 & 6 \\
+\hline
+\end{tabular}
+
+\begin{theorem}
+  Si on rajoute des $0$ devant l'écriture décimale d'un nombre, on obtient une autre écriture décimale du même nombre.
+\end{theorem}
+
+\begin{example}
+  $42,1337$ et $00042,1337$ sont des écritures décimales du même nombre.
+\end{example}
+
+\begin{theorem}
+  Si on rajoute des $0$ à la fin de l'écriture décimale d'un nombre et que cette écriture décimale possède une virgule, on obtient une autre écriture décimale du même nombre.
+\end{theorem}
+
+\begin{example}
+  $42,1337$ et $42,13370000$ sont des écritures décimales du même nombre.
+\end{example}
+
+\begin{theorem}
+  Si on rajoute une virgule suivie d'un ou plusieurs $0$ à la fin de l'écriture décimale d'un nombre et que cette écriture ne possède pas de virgule, on obtient un autre écriture décimale du même nombre.
+\end{theorem}
+
+\begin{example}
+  $7$ et $7,000000$ sont des écritures décimales du même nombre.
+\end{example}
+
+\subsection{Addition}
+
+
+\begin{example}
+
+Supposons qu'on veuille additionner $342,32$ et $125,61$.
+
+\begin{enumerate}
+ 
+\item on alligne les virgules
+
+\begin{tabular}{c c c c c c c}
+  & 3 & 4 & 2 & , & 3 & 2 \\
++ & 1 & 2 & 5 & , & 6 & 1 \\
+\hline
+=\\
+\end{tabular}
+
+\item on additionne les chiffres un à un de droite à gauche
+
+\begin{tabular}{c c c c c c c}
+  & 3 & 4 & 2 & , & 3 & 2 \\
++ & 1 & 2 & 5 & , & 6 & 1 \\
+\hline
+= & 4 & 6 & 7 & , & 9 & 3
+\end{tabular}
+ 
+
+\item et donc $342,32 + 125,61 = 467,93$
+\end{enumerate}
+\end{example}
+
+\paragraph{}
+Mmmmmhhhh, là on a eu de la chance. Que fait-on si le résultat d'une des sommes est supérieure ou égale à $10$ ?
+
+\begin{example}
+Si on avait voulu additionner $492,63$ et $331,72$, on aurait dû avoir recours aux retenues
+
+\begin{enumerate}
+
+ 
+\item on alligne les virgules
+
+\begin{tabular}{c c c c c c c}
+  & 4 & 9 & 2 & , & 6 & 3 \\
++ & 3 & 3 & 1 & , & 7 & 2 \\
+\hline
+=\\
+\end{tabular}
+
+\item on additionne les chiffres un à un en partant de la droite. Commençons par les centièmes.
+
+\begin{tabular}{c c c c c c c}
+  & 4 & 9 & 2 & , & 6 & 3 \\
++ & 3 & 3 & 1 & , & 7 & 2 \\
+\hline
+= &  &  &  &  &  & 5
+\end{tabular}
+ 
+\item Quand on veut calculer les dixièmes, on tombe sur un petit problème : $6 + 7 = 13$. La solution est de noter $3$ et de retenir $1$ :
+
+\begin{tabular}{c c c c c c c}
+  &   &   & 1 &   &   &   \\
+  & 4 & 9 & 2 & , & 6 & 3 \\
++ & 3 & 3 & 1 & , & 7 & 2 \\
+\hline
+= &  &  &  &  & 3  & 5
+\end{tabular}
+
+\item On continue sans problème pour les unités, et on retombe sur le même problème pour les dizaines ! Rebelotte, on pose une retenue :
+
+\begin{tabular}{c c c c c c c}
+  & 1 &  & 1 &   &   &   \\
+  & 4 & 9 & 2 & , & 6 & 3 \\
++ & 3 & 3 & 1 & , & 7 & 2 \\
+\hline
+= & 8 & 2 & 4 & , & 3  & 5
+\end{tabular}
+ 
+
+\item et donc $492,63 + 331,72 = 824,35 $
+\end{enumerate}
+\end{example}
+
+Il y a un dernier cas de figure qui peut arriver et auquel il faut penser : que se passe-t'il si le
+\subsection{Multiplication}
+
+\section{Les fractions}
+
+\end{document}
